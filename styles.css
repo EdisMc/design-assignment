@@ -1,4 +1,4 @@
-* {
+ * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ html, body {
 }
 
 .top-header {
-  background-color: #002f6c;
+  background-color: #002f6c; 
   color: white;
   display: flex;
   align-items: center;
@@ -18,18 +18,17 @@ html, body {
   padding: 0.75rem 1rem;
 }
 
-.logo, .header-right {
+.logo {
   display: flex;
   align-items: center;
-}
-
-.logo {
   gap: 0.5rem;
   font-size: 1.2rem;
 }
 
 .header-right {
-  gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
   font-size: 1.2rem;
 }
 
@@ -62,14 +61,14 @@ html, body {
 
 .layout {
   display: flex;
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px); 
 }
 
 .sidebar {
   flex: 0 0 250px;
-  background-color: #f5f5f5;
+  background-color: #f5f5f5;  
   padding: 1rem;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .sidebar nav ul {
@@ -102,11 +101,16 @@ html, body {
 }
 
 .hero {
-  background: url('https://www.lawnstarter.com/blog/wp-content/uploads/2023/06/close-up-of-grass-1.jpg') center/cover no-repeat;
+  margin: 0;
+  width: 100%;
+  background-image: url('https://www.lawnstarter.com/blog/wp-content/uploads/2023/06/close-up-of-grass-1.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
   padding: 3rem 2rem;
-  width: 100%;
+  border-radius: 0;
 }
+
 
 h1 {
   font-size: 2rem;
@@ -125,7 +129,8 @@ h1 {
 h3 {
   font-size: 1.1rem;
   font-weight: normal;
-  margin: 3rem 0 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-top: 3rem;
 }
 
 h4 {
@@ -140,19 +145,18 @@ h4 {
   margin-top: 1rem;
 }
 
-.card, .card-left-image, .card-right-image {
+.card {
   background-color: white;
   border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover, .card-left-image:hover, .card-right-image:hover {
+.card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .card img {
@@ -166,7 +170,6 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  flex-grow: 1;
 }
 
 .card-button {
@@ -176,22 +179,23 @@ h4 {
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  align-self: flex-start;
 }
 
 .featured-solution-cards {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   margin-top: 20px;
 }
 
 .card-left-image {
-  flex-direction: row;
+  display: flex;
   gap: 20px;
   align-items: flex-start;
+  border-radius: 10px;
   max-width: 900px;
   flex: 2 1 0;
+  background-color: white;
 }
 
 .card-left-image img {
@@ -200,16 +204,35 @@ h4 {
   flex-shrink: 0;
 }
 
+.card-left-image .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
 .card-left-image .card-button {
   align-self: flex-end;
 }
 
 .card-right-image {
-  flex-direction: row;
+  display: flex;
   gap: 20px;
   align-items: flex-start;
+  border-radius: 10px;
   max-width: 500px;
   flex: 1 1 0;
+  background-color: white;
+}
+
+.card-right-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.card-left-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .card-right-image .card-content {
@@ -219,8 +242,8 @@ h4 {
 .card-right-image .image-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
+  align-items: flex-end; 
+  gap: 10px; 
   flex-shrink: 0;
   max-width: 200px;
 }
@@ -230,18 +253,19 @@ h4 {
   height: auto;
 }
 
-.card-right-image .card-button {
+.card-right-image .image-container .card-button {
   padding: 8px 16px;
 }
 
 .reccomended-label {
-  background-color: #d0e7ff;
+  background-color: #d0e7ff; 
   color: #007bff;
   font-size: 0.8rem;
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 12px;
   margin-left: 10px;
+  vertical-align: middle;
   white-space: nowrap;
 }
 
